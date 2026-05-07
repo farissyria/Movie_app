@@ -35,11 +35,11 @@ A modern, secure RESTful API for managing cinema operations, built with ASP.NET 
 ## 🛠️ Installation
 
 ### 1. Clone the repository
-```bash
+bash
 git clone https://github.com/farissyria/Movie_app.git
 cd Movie_app
 __
-📦 Dependencies (Key Packages)
+## 📦 Dependencies (Key Packages)
 Microsoft.AspNetCore.Authentication.JwtBearer - JWT authentication
 
 Microsoft.AspNetCore.Identity - User management
@@ -51,12 +51,12 @@ AutoMapper.Extensions.Microsoft.DependencyInjection - Object mapping
 Swashbuckle.AspNetCore - Swagger/OpenAPI
 
 MongoDB.Driver - MongoDB .NET driver
-📧 Contact
+## 📧 Contact
 Your Name - @farissyria
 
 Project Link: https://github.com/farissyria/Movie_app
 
-🙏 Acknowledgments
+## 🙏 Acknowledgments
 ASP.NET Core team for the excellent framework
 
 MongoDB team for the NoSQL database
