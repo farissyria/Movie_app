@@ -1,7 +1,6 @@
 ﻿using Cinema.Application.DTOs;
 using Cinema.Application.Services;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cinema.Api.Controllers
@@ -144,7 +143,7 @@ namespace Cinema.Api.Controllers
                 }
                 catch (Exception ex)
                 {
-                    _logger.LogError(ex, "Error updating movie", id);
+                    _logger.LogError(ex, "Error updating movie");
                     return StatusCode(500, "Internal server error");
                 }
             }
@@ -164,7 +163,7 @@ namespace Cinema.Api.Controllers
                 }
                 catch (Exception ex)
                 {
-                    _logger.LogError(ex, "Error deleting movie", id);
+                    _logger.LogError(ex, "Error deleting movie");
                     return StatusCode(500, "Internal server error");
                 }
             }

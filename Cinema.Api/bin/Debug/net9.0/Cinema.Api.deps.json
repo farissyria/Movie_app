@@ -563,6 +563,7 @@
       "Cinema.Infrastructure/1.0.0": {
         "dependencies": {
           "AspNetCore.Identity.MongoDbCore": "7.0.0",
+          "Cinema.Application": "1.0.0",
           "Cinema.Core": "1.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "10.0.7",
           "MongoDB.Bson": "3.8.0",

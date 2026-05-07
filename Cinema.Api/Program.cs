@@ -1,13 +1,10 @@
-﻿using AspNetCore.Identity.MongoDbCore.Extensions;
-using AspNetCore.Identity.MongoDbCore.Models;
-using Cinema.Application.Mappings;
+﻿using Cinema.Application.Mappings;
 using Cinema.Application.Services;
 using Cinema.Core.Entities;
 using Cinema.Core.Interfaces;
 using Cinema.Infrastructure.Data;
 using Cinema.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -123,6 +120,7 @@ namespace Cinema.Api
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddAutoMapper(cfg => cfg.AddProfile<MappingProfile>());
             builder.Services.AddScoped<DbSeeder>();
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             // ==========================================
             // 6. Configure CORS
@@ -142,7 +140,7 @@ namespace Cinema.Api
             // ==========================================
             var app = builder.Build();
 
-            
+
 
             // Quick test to create database
             using (var scope = app.Services.CreateScope())

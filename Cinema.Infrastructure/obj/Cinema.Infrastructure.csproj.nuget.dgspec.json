@@ -1,17 +1,105 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\source\\repos\\Cinema.Infrastructure\\Cinema.Infrastructure.csproj": {}
+    "C:\\Users\\Administrator\\source\\repos\\Movie_app\\Cinema.Infrastructure\\Cinema.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\source\\repos\\Cinema.Core\\Cinema.Core.csproj": {
+    "C:\\Users\\Administrator\\source\\repos\\Movie_app\\Cinema.Application\\Cinema.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\Cinema.Core\\Cinema.Core.csproj",
-        "projectName": "Cinema.Core",
-        "projectPath": "C:\\Users\\Administrator\\source\\repos\\Cinema.Core\\Cinema.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\Movie_app\\Cinema.Application\\Cinema.Application.csproj",
+        "projectName": "Cinema.Application",
+        "projectPath": "C:\\Users\\Administrator\\source\\repos\\Movie_app\\Cinema.Application\\Cinema.Application.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\source\\repos\\Cinema.Core\\obj\\",
+        "outputPath": "C:\\Users\\Administrator\\source\\repos\\Movie_app\\Cinema.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\Administrator\\source\\repos\\Movie_app\\Cinema.Core\\Cinema.Core.csproj": {
+                "projectPath": "C:\\Users\\Administrator\\source\\repos\\Movie_app\\Cinema.Core\\Cinema.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[16.1.1, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[10.0.7, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.17.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.312/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Administrator\\source\\repos\\Movie_app\\Cinema.Core\\Cinema.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\Movie_app\\Cinema.Core\\Cinema.Core.csproj",
+        "projectName": "Cinema.Core",
+        "projectPath": "C:\\Users\\Administrator\\source\\repos\\Movie_app\\Cinema.Core\\Cinema.Core.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Administrator\\source\\repos\\Movie_app\\Cinema.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -80,14 +168,14 @@
         }
       }
     },
-    "C:\\Users\\Administrator\\source\\repos\\Cinema.Infrastructure\\Cinema.Infrastructure.csproj": {
+    "C:\\Users\\Administrator\\source\\repos\\Movie_app\\Cinema.Infrastructure\\Cinema.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\Cinema.Infrastructure\\Cinema.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\Movie_app\\Cinema.Infrastructure\\Cinema.Infrastructure.csproj",
         "projectName": "Cinema.Infrastructure",
-        "projectPath": "C:\\Users\\Administrator\\source\\repos\\Cinema.Infrastructure\\Cinema.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Administrator\\source\\repos\\Movie_app\\Cinema.Infrastructure\\Cinema.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\source\\repos\\Cinema.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Administrator\\source\\repos\\Movie_app\\Cinema.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -109,8 +197,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Administrator\\source\\repos\\Cinema.Core\\Cinema.Core.csproj": {
-                "projectPath": "C:\\Users\\Administrator\\source\\repos\\Cinema.Core\\Cinema.Core.csproj"
+              "C:\\Users\\Administrator\\source\\repos\\Movie_app\\Cinema.Application\\Cinema.Application.csproj": {
+                "projectPath": "C:\\Users\\Administrator\\source\\repos\\Movie_app\\Cinema.Application\\Cinema.Application.csproj"
+              },
+              "C:\\Users\\Administrator\\source\\repos\\Movie_app\\Cinema.Core\\Cinema.Core.csproj": {
+                "projectPath": "C:\\Users\\Administrator\\source\\repos\\Movie_app\\Cinema.Core\\Cinema.Core.csproj"
               }
             }
           }

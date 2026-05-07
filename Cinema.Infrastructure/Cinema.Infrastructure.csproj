@@ -16,6 +16,7 @@
 		<PackageReference Include="MongoDB.Driver" Version="3.8.0" />
 	</ItemGroup>
 	<ItemGroup>
+	  <ProjectReference Include="..\Cinema.Application\Cinema.Application.csproj" />
 	  <ProjectReference Include="..\Cinema.Core\Cinema.Core.csproj" />
 	</ItemGroup>
 </Project>

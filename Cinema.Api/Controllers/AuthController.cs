@@ -1,6 +1,5 @@
 ﻿using Cinema.Application.DTOs;
 using Cinema.Core.Interfaces;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cinema.Api.Controllers

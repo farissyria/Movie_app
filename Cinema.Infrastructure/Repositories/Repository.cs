@@ -16,9 +16,9 @@ namespace Cinema.Infrastructure.Repositories
 
        
             public Repository(IMongoCollection<T> collection)
-        {
+            {
             _collection = collection;
-        }
+             }
        
 
         public async Task<T?> GetByIdAsync(string id)

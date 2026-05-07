@@ -1170,6 +1170,7 @@
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "AspNetCore.Identity.MongoDbCore": "7.0.0",
+          "Cinema.Application": "1.0.0",
           "Cinema.Core": "1.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "10.0.7",
           "MongoDB.Bson": "3.8.0",
@@ -2970,11 +2971,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\Cinema.Api\\Cinema.Api.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\Movie_app\\Cinema.Api\\Cinema.Api.csproj",
       "projectName": "Cinema.Api",
-      "projectPath": "C:\\Users\\Administrator\\source\\repos\\Cinema.Api\\Cinema.Api.csproj",
+      "projectPath": "C:\\Users\\Administrator\\source\\repos\\Movie_app\\Cinema.Api\\Cinema.Api.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\source\\repos\\Cinema.Api\\obj\\",
+      "outputPath": "C:\\Users\\Administrator\\source\\repos\\Movie_app\\Cinema.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2996,11 +2997,11 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\Administrator\\source\\repos\\Cinema.Application\\Cinema.Application.csproj": {
-              "projectPath": "C:\\Users\\Administrator\\source\\repos\\Cinema.Application\\Cinema.Application.csproj"
+            "C:\\Users\\Administrator\\source\\repos\\Movie_app\\Cinema.Application\\Cinema.Application.csproj": {
+              "projectPath": "C:\\Users\\Administrator\\source\\repos\\Movie_app\\Cinema.Application\\Cinema.Application.csproj"
             },
-            "C:\\Users\\Administrator\\source\\repos\\Cinema.Infrastructure\\Cinema.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Administrator\\source\\repos\\Cinema.Infrastructure\\Cinema.Infrastructure.csproj"
+            "C:\\Users\\Administrator\\source\\repos\\Movie_app\\Cinema.Infrastructure\\Cinema.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Administrator\\source\\repos\\Movie_app\\Cinema.Infrastructure\\Cinema.Infrastructure.csproj"
             }
           }
         }
