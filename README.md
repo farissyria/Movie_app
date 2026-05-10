@@ -26,7 +26,7 @@ A modern, secure RESTful API with Clean Architecture for managing cinema operati
   <br>
 </div>
 
-![Swagger UI showing Cinema API endpoints](./s2.png)
+ 
  
 ## ✨ Features
 
