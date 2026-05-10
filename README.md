@@ -102,8 +102,21 @@ This project follows **Clean Architecture** (also known as Onion Architecture) t
 - [Redis](https://redis.io/download) (local or cloud like Redis Labs/Azure Cache)
 - [Visual Studio 2022](https://visualstudio.microsoft.com/) or [VS Code](https://code.visualstudio.com/)
 - [Git](https://git-scm.com/)
+- 
+## 📥 Redis for Windows (Development)
 
-  ## 📦 NuGet Packages Installation
+### Option A: Memurai (Recommended for Windows - No WSL needed)
+
+[Download Memurai for Windows](https://www.memurai.com/)
+
+
+### Option B: Docker (Alternative for any OS)
+
+```bash
+docker run -d -p 6379:6379 --name redis redis:alpine
+```
+
+ ## 📦 NuGet Packages Installation
 
 Install these packages using Package Manager Console:
 
