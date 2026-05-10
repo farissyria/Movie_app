@@ -4,7 +4,7 @@ A modern, secure RESTful API for managing cinema operations, built with ASP.NET 
 
 <div align="center">
 
-![Swagger API Documentation](./s1.png)
+![Swagger API Documentation](./add swager pic.png)
 
 *Swagger UI showing Cinema API endpoints*
 
