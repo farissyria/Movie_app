@@ -61,12 +61,25 @@ A modern, secure RESTful API with Clean Architecture for managing cinema operati
 - [Redis](https://redis.io/download) (local or cloud like Redis Labs/Azure Cache)
 - [Visual Studio 2022](https://visualstudio.microsoft.com/) or [VS Code](https://code.visualstudio.com/)
 - [Git](https://git-scm.com/)
+
+  ## 📦 NuGet Packages Installation
+
+Install these packages using Package Manager Console:
+
+```powershell
+Install-Package AspNetCore.Identity.MongoDbCore -Version 7.0.0
+Install-Package Microsoft.Extensions.Caching.StackExchangeRedis -Version 10.0.7
+Install-Package Microsoft.Extensions.Configuration.Abstractions -Version 10.0.7
+Install-Package MongoDB.Bson -Version 3.8.0
+Install-Package MongoDB.Driver -Version 3.8.0
+Install-Package Newtonsoft.Json -Version 13.0.4
+```
+
 🚀 Redis Caching Implementation
 Caching Strategy
 Get All Movies - Cached for 10 minutes by default
-
  
-Benefits Implemented
+#Benefits Implemented
 ⚡ Reduced Database Load - Up to 80% reduction in MongoDB queries
 
 🚀 Improved Response Times - 5-10x faster responses for cached endpoints
@@ -93,7 +106,7 @@ Benefits Implemented
     "Audience": "CinemaClient"
   },
   "AllowedHosts": "*"
-}
+
 ```
 ## 🛠️ Installation
 
