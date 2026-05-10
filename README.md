@@ -9,12 +9,18 @@ A modern, secure RESTful API with Clean Architecture for managing cinema operati
   <br>
   <em>Figure 1: Swagger API Documentation</em>
   <br>
+  </div>
+  <div align="center">
   <img src="./s2.png" width="500" alt="Swagger UI">
     <em>Figure 1: Swagger API Documentation</em>
       <br>
+    </div>
+    <div align="center">
        <img src="./s3.png" width="500" alt="Swagger UI">
     <em>Figure 3: How to run Redis Cli</em>
       <br>
+      </div>
+      <div align="center">
        <img src="./s4.png" width="500" alt="Swagger UI">
     <em>Figure 4: Redis Cli Results</em>
       <br>
