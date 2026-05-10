@@ -3,9 +3,10 @@
 A modern, secure RESTful API for managing cinema operations, built with ASP.NET Core 8, MongoDB, Redis Cache, and JWT authentication.
 
 <div align="center">
-
-![Swagger API Documentation](./add swager pic.png)
-
+  <img src="s1.png" alt="Swagger API Documentation" width="800"/>
+  <br/>
+  <em>Swagger UI showing Cinema API endpoints</em>
+</div>
 *Swagger UI showing Cinema API endpoints*
 
 ## ✨ Features
