@@ -4,26 +4,26 @@ A modern, secure RESTful API with Clean Architecture for managing cinema operati
 
 *Swagger UI showing Cinema API endpoints & Redis Cli*
 <div align="center">
-  <img src="./s1.png" width="500" alt="Swagger UI">
+  <img src="./s1.png" width="500" alt="">
  
   <br>
   <em>Figure 1: Swagger API Documentation</em>
   <br>
   </div>
   <div align="center">
-  <img src="./s2.png" width="500" alt="Swagger UI">
-    <em>Figure 1: Swagger API Documentation</em>
-      <br>
-    </div>
-    <div align="center">
-       <img src="./s3.png" width="500" alt="Swagger UI">
-    <em>Figure 3: How to run Redis Cli</em>
-      <br>
-      </div>
-      <div align="center">
-       <img src="./s4.png" width="500" alt="Swagger UI">
+  <img src="./s2.png" width="500" alt="">
+  <em>Figure 1: Swagger API Documentation</em>
+  <br>
+  </div>
+  <div align="center">
+  <img src="./s3.png" width="500" alt="">
+  <em>Figure 3: How to run Redis Cli</em>
+   <br>
+   </div>
+   <div align="center">
+   <img src="./s4.png" width="500" alt="">
     <em>Figure 4: Redis Cli Results</em>
-      <br>
+  <br>
 </div>
 
 ![Swagger UI showing Cinema API endpoints](./s2.png)
