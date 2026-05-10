@@ -9,20 +9,29 @@ namespace Cinema.Application.Services
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
-        
+        private readonly ICacheService _cache;
 
-        public MovieService(IUnitOfWork unitOfWorky, IMapper mapper)
+        public MovieService(IUnitOfWork unitOfWorky, IMapper mapper, ICacheService cache)
         {
             _unitOfWork = unitOfWorky;
             _mapper = mapper;
-          
+          _cache = cache;
         }
       
 
         public async Task<IEnumerable<MovieDto>> GetAllMoviesAsync()
         {
+            string cacheKey = "Get_all_movies";
+            var cachedMovies = await _cache.GetAll<IEnumerable<MovieDto>>(cacheKey);
+            if (cachedMovies != null)
+                return cachedMovies;
+
+
             var movies = await _unitOfWork.Movies.GetAllAsync();
-            return _mapper.Map<IEnumerable<MovieDto>>(movies);
+            //return _mapper.Map<IEnumerable<MovieDto>>(movies);
+            var movieDtos = _mapper.Map<IEnumerable<MovieDto>>(movies);
+            await _cache.SetAsync(cacheKey, movieDtos, 10);
+            return movieDtos;
         }
 
         public async Task<MovieDto?> GetMovieByIdAsync(string id)

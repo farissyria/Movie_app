@@ -2,6 +2,7 @@
 using Cinema.Application.Services;
 using Cinema.Core.Entities;
 using Cinema.Core.Interfaces;
+using Cinema.Infrastructure;
 using Cinema.Infrastructure.Data;
 using Cinema.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -110,6 +111,14 @@ namespace Cinema.Api
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey))
                 };
             });
+            builder.Services.AddStackExchangeRedisCache(options =>
+            {
+                options.Configuration = builder.Configuration.GetConnectionString("Redis");
+                options.InstanceName = "Cinema_";
+            });
+
+            // Register cache service
+            builder.Services.AddScoped<ICacheService, RedisCacheService>();
 
             // ==========================================
             // 5. Register Dependency Injection
