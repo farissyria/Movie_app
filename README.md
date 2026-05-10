@@ -2,6 +2,47 @@
 
 A modern, secure RESTful API with Clean Architecture for managing cinema operations, built with ASP.NET Core 9, MongoDB, Redis Cache, and JWT authentication.
 
+## 🏗️ Clean Architecture
+
+This project follows **Clean Architecture** (also known as Onion Architecture) to ensure separation of concerns, maintainability, and testability.
+
+### Key Features of This Architecture
+
+✅ **Separation of Concerns** - Each layer has a specific responsibility  
+✅ **Testability** - Layers can be tested independently  
+✅ **Maintainability** - Changes in one layer don't affect others  
+✅ **Framework Independence** - Core logic doesn't depend on external frameworks  
+✅ **Database Independence** - Easy to switch between databases  
+
+### Project Details
+
+#### 🎯 Cinema.Core (Domain Layer)
+- Entities (Movie, User, etc.)
+- Business rules and validations
+- Repository interfaces
+- No external dependencies
+
+#### 🎯 Cinema.Application (Application Layer)
+- Service implementations
+- DTOs (Data Transfer Objects)
+- AutoMapper profiles
+- Business use cases
+- Depends only on Cinema.Core
+
+#### 🎯 Cinema.Infrastructure (Infrastructure Layer)
+- MongoDB data context
+- Repository implementations
+- Redis cache service (`RedisCacheService.cs`)
+- Data access logic
+- Implements interfaces from Cinema.Core
+
+#### 🎯 Cinema.Api (Presentation Layer)
+- REST API controllers
+- JWT authentication middleware
+- Program.cs configuration
+- appsettings.json
+- Depends on Application and Infrastructure
+
 *Swagger UI showing Cinema API endpoints & Redis Cli*
 <div align="left">
   <img src="./s1.png" width="500" alt="">
