@@ -75,16 +75,25 @@ Benefits Implemented
 
 🔄 Distributed Cache - Works across multiple server instances
 
-## 🗄️ MongoDB Configuration
+## 🗄️ MongoDB Configuration & JWT
 
 ## Add to `appsettings.json`
 
 ```json
-{
+  "ConnectionStrings": {
+    "MongoDBConnection": "mongodb://localhost:27017",
+    "Redis": "localhost:6379"
+  },
   "MongoDB": {
-    "ConnectionString": "mongodb://localhost:27017",
     "DatabaseName": "CinemaDB"
-  }
+  },
+  "Jwt": {
+    "Key": "your-super-secret-key-with-at-least-32-characters-long-for-jwt-security",
+    "Issuer": "CinemaAPI",
+    "Audience": "CinemaClient"
+  },
+  "AllowedHosts": "*"
+}
 ```
 ## 🛠️ Installation
 
