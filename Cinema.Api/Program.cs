@@ -5,6 +5,7 @@ using Cinema.Core.Interfaces;
 using Cinema.Infrastructure;
 using Cinema.Infrastructure.Data;
 using Cinema.Infrastructure.Repositories;
+using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
@@ -130,9 +131,9 @@ namespace Cinema.Api
             builder.Services.AddAutoMapper(cfg => cfg.AddProfile<MappingProfile>());
             builder.Services.AddScoped<DbSeeder>();
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-
-            // ==========================================
-            // 6. Configure CORS
+            builder.Services.AddMediatR(typeof(Cinema.Application.DTOs.MovieDto).Assembly);
+           
+         
             // ==========================================
             builder.Services.AddCors(options =>
             {

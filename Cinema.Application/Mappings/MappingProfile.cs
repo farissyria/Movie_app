@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Cinema.Application.DTOs;
+using Cinema.Application.Movies.Commands;
 using Cinema.Core.Entities;
 
 namespace Cinema.Application.Mappings
@@ -13,9 +14,9 @@ namespace Cinema.Application.Mappings
             CreateMap<Movie, MovieDto>().ReverseMap();
             CreateMap<CreateMovieDto, Movie>();
             CreateMap<UpdateMovieDto, Movie>();
-
+            CreateMap<CreateMovieCommand, Movie>();
             // Screening mappings
-          
+
 
             // Auth mappings
             CreateMap<User, AuthResponseDto>()

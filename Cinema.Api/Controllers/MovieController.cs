@@ -1,5 +1,7 @@
 ﻿using Cinema.Application.DTOs;
+using Cinema.Application.Movies.Queries;
 using Cinema.Application.Services;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,10 +13,12 @@ namespace Cinema.Api.Controllers
         public class MoviesController : ControllerBase
         {
             private readonly IMovieService _movieService;
-            private readonly ILogger<MoviesController> _logger;
+        private readonly IMediator _mediator;
+        private readonly ILogger<MoviesController> _logger;
 
-            public MoviesController(IMovieService movieService, ILogger<MoviesController> logger)
+            public MoviesController(IMediator mediator,IMovieService movieService, ILogger<MoviesController> logger)
             {
+            _mediator = mediator;
                 _movieService = movieService;
                 _logger = logger;
             }
@@ -25,7 +29,8 @@ namespace Cinema.Api.Controllers
             {
                 try
                 {
-                    var movies = await _movieService.GetAllMoviesAsync();
+                var query = new GetAllMoviesQuery();
+                var movies = await _mediator.Send(query);
                     return Ok(movies);
                 }
                 catch (Exception ex)
