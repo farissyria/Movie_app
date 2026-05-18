@@ -1,6 +1,6 @@
 # 🎬 Cinema Management API
 
-A modern, secure RESTful API with Clean Architecture for managing cinema operations, built with ASP.NET Core 9, MongoDB, Redis Cache, and JWT authentication.
+A modern, secure RESTful API with Clean Architecture for managing cinema operations, built with ASP.NET Core 9, MongoDB, Redis Cache, JWT authentication, and **CQRS pattern**.
 
 ## 🏗️ Clean Architecture
 
@@ -27,6 +27,8 @@ This project follows **Clean Architecture** (also known as Onion Architecture) t
 - DTOs (Data Transfer Objects)
 - AutoMapper profiles
 - Business use cases
+- CQRS Commands & Queries**
+- MediatR Pipeline Behaviors**
 - Depends only on Cinema.Core
 
 #### 🎯 Cinema.Infrastructure (Infrastructure Layer)
@@ -81,7 +83,9 @@ This project follows **Clean Architecture** (also known as Onion Architecture) t
 - 🗄️ **MongoDB Integration** - NoSQL database for high performance
 - ⚡ **Redis Caching** - High-performance distributed caching for improved response times
 - 🛡️ **Role-Based Authorization** - Admin-only endpoints for sensitive operations
-
+- 📦 **CQRS Pattern** - Separation of Command and Query responsibilities
+- 🔄 **MediatR** - In-process messaging for handling requests
+  
 ## 🚀 Technology Stack
 
 - **.NET 9** - Latest LTS version
@@ -94,7 +98,9 @@ This project follows **Clean Architecture** (also known as Onion Architecture) t
 - **Swagger/OpenAPI** - API documentation
 - **Repository Pattern** - Clean architecture
 - **Unit of Work Pattern** - Transaction management
-
+- **CQRS (Command Query Responsibility Segregation)** - Separation of read/write operations
+- **MediatR** - Message bus implementation
+  
 ## 📋 Prerequisites
 
 - [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
@@ -127,6 +133,8 @@ Install-Package Microsoft.Extensions.Configuration.Abstractions -Version 10.0.7
 Install-Package MongoDB.Bson -Version 3.8.0
 Install-Package MongoDB.Driver -Version 3.8.0
 Install-Package Newtonsoft.Json -Version 13.0.4
+Install-Package MediatR -Version 11.1.0
+Install-Package MediatR.Extensions.Microsoft.DependencyInjection -Version 11.1.0
 ```
 
 🚀 Redis Caching Implementation
